@@ -1,0 +1,20 @@
+{
+  "name": "is-email-in-graph",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/identity": "^2.0.1",
+    "@microsoft/microsoft-graph-client": "^3.0.1",
+    "azure-functions-core-tools": "^3.0.3904",
+    "isomorphic-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "@microsoft/microsoft-graph-types": "^2.13.0"
+  }
+}
