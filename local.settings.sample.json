@@ -1,0 +1,17 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "SQL_SERVER": "RESOURCE-NAME.database.windows.net",
+    "SQL_DATABASE":"DATABASE-NAME",
+    "SQL_USER":"USER-NAME",
+    "SQL_PASSWORD":"USER-PASSWORD",
+    "AZURE_TENANT_ID": "AZURE-ACTIVE-DIRECTORY-TENANT-ID",
+    "AZURE_CLIENT_ID": "AZURE-ACTIVE-DIRECTORY-CLIENT-ID",
+    "AZURE_CLIENT_SECRET": "AZURE-ACTIVE-DIRECTORY-CLIENT-SECRET",
+    "TEST_USER_1":"EMAIL1",
+    "TEST_USER_2":"EMAIL2",
+    "NODE_ENV": "development"
+  }
+}

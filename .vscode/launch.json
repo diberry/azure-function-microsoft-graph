@@ -4,6 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
+ {
+        "name": "Node.js - Debug Current File",
+        "type": "node",
+        "request": "launch",
+        "program": "${file}"
+      },
         {
             "type": "pwa-node",
             "request": "launch",
@@ -19,6 +26,17 @@
             "request": "attach",
             "port": 9229,
             "preLaunchTask": "func: host start"
-        }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Jest Tests",
+            "disableOptimisticBPs": true,
+            "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+            "args": [
+                "-i"
+            ],
+            "internalConsoleOptions": "openOnSessionStart",
+          }
     ]
 }

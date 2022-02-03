@@ -1,23 +1,16 @@
 const {Client} = require("@microsoft/microsoft-graph-client");
 const {TokenCredentialAuthenticationProvider} = require("@microsoft/microsoft-graph-client/authProviders/azureTokenCredentials");
-const {DefaultAzureCredential} = require("@azure/identity");
+const {
+    AuthorizationCodeCredential
+} = require("@azure/identity");
+const fs = require('fs').promises;
+const path = require('path');
 require('isomorphic-fetch');
+const { getAzureCredentialForGraph } = require('./azure-credential');
 
-const init = () =>{
-    const credential = new DefaultAzureCredential();
-    const authProvider = new TokenCredentialAuthenticationProvider(credential, {
-        scopes: ['https://graph.microsoft.com/.default']
-    });
-    
-    const client = Client.initWithMiddleware({
-        debugLogging: true,
-        authProvider
-    });
-    return client;
-}
 const getUserFromGraph = async (userEmail) =>{
 
-    let client = init();
+    let client = getAzureCredentialForGraph();
 
     let status = {
         isFound: false,
